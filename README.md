@@ -1,6 +1,8 @@
 # Bazel Tips
 
-A collection of useful Bazel commands and tips.
+A collection of useful Bazel commands and tips, shown via a Go based simple example project.
+
+To get started, download [Bazelisk](https://github.com/bazelbuild/bazelisk) and put it in your path as `bazel`. Bazelisk will automatically download and manage the right version of `bazel`.
 
 ## Basics
 
