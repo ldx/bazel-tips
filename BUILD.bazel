@@ -1,0 +1,22 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# Run Gazelle to generate BUILD files.
+gazelle(
+    name = "gazelle",
+    prefix = "github.com/ldx/bazel_tips",
+)
+
+# Update WORKSPACE file with required Go dependencies via Gazelle.
+gazelle(
+    name = "gazelle-update-repos",
+    args = [
+        "-from_file=go.mod",
+    ],
+    command = "update-repos",
+)
+
+# Fix BUILD file formatting via Gazelle.
+gazelle(
+    name = "gazelle-fix",
+    command = "fix",
+)

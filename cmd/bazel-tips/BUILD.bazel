@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "bazel-tips_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/ldx/bazel_tips/cmd/bazel-tips",
+    visibility = ["//visibility:private"],
+    deps = ["//pkg/mypackage"],
+)
+
+go_binary(
+    name = "bazel-tips",
+    embed = [":bazel-tips_lib"],
+    visibility = ["//visibility:public"],
+)
