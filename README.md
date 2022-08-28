@@ -1,8 +1,13 @@
 # Bazel Tips
 
-A collection of useful Bazel commands and tips, shown via a Go based simple example project.
+A collection of useful Bazel commands and tips, with some explanation what is happening, demonstrated via a simple example Go project.
 
 To get started, download [Bazelisk](https://github.com/bazelbuild/bazelisk) and put it in your path as `bazel`. Bazelisk will automatically download and manage the right version of `bazel`.
+
+Useful links:
+* [Intro to Bazel](https://bazel.build/about/intro)
+* [Bazel Concepts](https://bazel.build/concepts/build-ref)
+* [Bazel Cheatsheet](https://skia.googlesource.com/buildbot/+/main/BAZEL_CHEATSHEET.md)
 
 ## Basics
 
@@ -237,7 +242,6 @@ To show the output base:
     /home/vilmos/.cache/bazel/_bazel_vilmos/aa9d8e47d6f744480136e37f4c1ec205
 
 This is the directory under which is the md5 hash of the path of the workspace root directory. A few interesting directories inside the output base:
-
 * `external/` contains downloaded remote repositories.
 * `execroot/` working directory for actions.
 * `execroot/<workspace name>/bazel-out/` output from the build.
